@@ -185,7 +185,7 @@ if uploaded is not None:
     with col1:
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("#### 🖼️ Image Preview")
-        st.image(pil_img, width=None, caption=uploaded.name)
+        st.image(pil_img, use_container_width=True, caption=uploaded.name)
         w, h = pil_img.size
         st.caption(f"Resolution: {w} × {h} px  |  Format: {pil_img.format or 'N/A'}")
         st.markdown('</div>', unsafe_allow_html=True)
